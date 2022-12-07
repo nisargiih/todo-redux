@@ -2,26 +2,16 @@ import './App.css';
 import { useState } from 'react';
 import { ADD_TASK_START, DELETE_TASK_START, UPDATE_TASK_START } from "./action/action"
 import { connect, useDispatch, useSelector } from 'react-redux'
-import { Connect } from 'react-redux';
-
-// function EditData(props) {
-//   const dispatch = useDispatch()
-//   return (
-//     <button onClick={() => dispatch({ type: UPDATE_TASK_START, id: props.id })}>Edit</button>
-//   )
-// }
 
 function App(props) {
 
   const [task, setTask] = useState('')
   const dispatch = useDispatch()
 
+  // data fetching without mapStateToProps (useSelector library)
   // const data1 = useSelector((state) => state.tasks)
-  // const data1 = useSelector((state) => state.tasks[0].id)
-  // console.log(data1)
 
   const displayTask = props.taskData.tasks
-  // console.log(displayTask[0].isEdit)
 
   return (
     <div className="App">

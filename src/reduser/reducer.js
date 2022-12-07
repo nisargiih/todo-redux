@@ -13,7 +13,7 @@ const reducer = (state = initializeState, action) => {
         }
         case 'DELETE_TASK_START': {
             return {
-                tasks : state.tasks.filter((item) => (item.id) != (action.id)   )
+                tasks : state.tasks.filter((item) => (item.id) !== (action.id)   )
             }
         }
         case 'UPDATE_TASK_START': {
